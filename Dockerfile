@@ -6,6 +6,6 @@ RUN yum install -y httpd \
 ADD https://webserverbucketaws.s3.amazonaws.com/nolo.zip /var/www/html/
 WORKDIR /var/www/html
 RUN unzip nolo.zip
-RUN cp nolo .
+RUN cp -rvf nolo/* .
 CMD ["/usr/sbin/httpd", "-D",  "FOREGROUND"]
 EXPOSE 80
