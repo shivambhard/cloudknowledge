@@ -3,9 +3,9 @@ MAINTAINER shivambhardwaj1901@gmail.com
 RUN yum install -y httpd \
   zip \
  unzip 
-ADD https://webserverbucketaws.s3.amazonaws.com/nolo.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page5/basketball.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip nolo.zip
-RUN cp -rvf nolo/* .
+RUN unzip basketball.zip
+RUN cp -rvf basketball/* .
 CMD ["/usr/sbin/httpd", "-D",  "FOREGROUND"]
 EXPOSE 80
